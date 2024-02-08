@@ -1,7 +1,8 @@
 // connect to database and import related files and libraries
 const mongoose = require('mongoose');
 const blogRoutes = require("./routes/blogRoutes");
-const dbURI = 'mongodb+srv://Node_Commander:m1n9g6a3@cluster.m4j1ucc.mongodb.net/node_tuto';
+// make sure to change <user> and <password> with appropriate user in Mongo Db
+const dbURI = 'mongodb+srv://<user>:<password>@cluster.m4j1ucc.mongodb.net/node_tuto';
 mongoose.connect(dbURI)
 .then(() => app.listen(3000))
 .catch((err) => console.log(err));
